@@ -1,6 +1,7 @@
 from unittest import TestCase
 from pynameday.slovakia import Slovakia
 from pynameday.czechrepublic import CzechRepublic
+from pynameday.austria import Austria
 
 
 class NamedayMixinTest(object):
@@ -26,3 +27,9 @@ class CzechRepublicTest(TestCase, NamedayMixinTest):
     """Czech nameday test"""
     def setUp(self):
         self.cal = CzechRepublic.NAMEDAYS
+
+
+class AustriaTest(TestCase, NamedayMixinTest):
+    """Austrian nameday test"""
+    def setUp(self):
+        self.cal = Austria.NAMEDAYS
